@@ -1,0 +1,50 @@
+.menuContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+
+  border: 1px solid rgba(255, 255, 255, 0.315);
+  background-color: rgba(34, 34, 34, 0.794);
+  * {
+    padding: 30px 50px;
+  }
+}
+
+.developer {
+  color: #666;
+  display: inline-block;
+  margin: 0;
+  text-transform: uppercase;
+  display: block;
+}
+.developer:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #ffffff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.developer:hover:after {
+  transform: scaleX(1);
+}
+.developer.fromRight:after {
+  transform-origin: 100% 50%;
+}
+.developer.fromLeft:after {
+  transform-origin: 0% 50%;
+}
+a {
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(184, 183, 183);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(212, 209, 209);
+}
